@@ -5,7 +5,7 @@ print(ans)
 
 
 for i in ans:
-    if i%2==0 and i>0:
+    if i%2==0 and i>=0:
         print(i,end=" ")
 
 print()
