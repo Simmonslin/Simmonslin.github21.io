@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+  <style>
+ span.clock{color:#66ff33;
+            size:25% 25%;
+			font-family:Monoton;
+			letter-spacing:20px;
+			font-size:50px;
+} 
+ </style>
+  <script type="text/Javascript">
+    function startTime(){
+      var today = new Date();
+      var hh = today.getHours();
+      var mm = today.getMinutes();
+      var ss = today.getSeconds();
+      mm = checkTime(mm);
+      ss = checkTime(ss);
+      document.getElementById('clock').innerHTML = hh + ":" + mm + ":" + ss;
+      var timeoutId = setTimeout(startTime, 500);
+    }
+
+    function checkTime(i){
+      if(i < 10) {
+        i = "0" + i;
+      }
+      return i;
+    }
+  
+  </script>
+  </head>
+  <span class="clock">
+  <body onload="startTime()">
+    <div id="clock"></div>
+	</span>
+  </body>
+</html>
